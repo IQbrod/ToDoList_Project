@@ -14,4 +14,8 @@ export class TodosService {
             map((body:any) => body._embedded.todos )
         );
     }
+
+    /*createNewTodo () : void {
+        this.http.post('http://localhost:8080/todos', map((body:any) => body.
+    }*/
 }
