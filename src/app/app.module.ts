@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { TodoComponent } from './component/todo/todo.component';
 import { TodoListComponent } from './component/todo-list/todo-list.component';
+import { TodosService } from './service/todo-service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,9 +14,12 @@ import { TodoListComponent } from './component/todo-list/todo-list.component';
     TodoListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    TodosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
